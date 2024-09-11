@@ -6,8 +6,18 @@ body {
     background-color: rgb(255, 255, 255);
 }
 
+h1{
+    font-family: 'Iron Maiden', sans-serif;
+    background-color: transparent;
+    color: #3701f8;
+    font-size: 500%;
+}
+
 header {
-    background-color: #1b3674;
+    background-color: #333;
+    /* background-image: url("img/back.png"); */
+    background: url("img/back.png");
+    background-size:contain;
     color: white;
     padding: 20px;
     text-align: center;
@@ -58,12 +68,18 @@ article {
 
 /* Footer */
 footer {
-    background-color: #1b3674;
+    background-color: #333;
     color: white;
     text-align: center;
     padding: 10px;
-    position: fixed;
+    position:relative;
     width: 100%;
     bottom: 0;
 }
 
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
