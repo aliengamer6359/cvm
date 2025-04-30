@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="formStyles.css">
+    <meta charset="UTF-8">
+    <title>Formularios GET y POST</title>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <div class="header">
+                <h1 class="animation a1" style="color: #4f46a5">Semana 5 ICT</h1>
+                <h4 class="animation a2">Ingresa tus datos</h4>
+            </div>
+            <h3>Formulario con método GET (simulado)</h3>
+            <form id="formGet" method="get" class="form">
+                <input type="text" name="nombre" required class="form-field animation a3" placeholder="Nombre"><br>
+                <input type="email" name="email" required class="form-field animation a4" placeholder="Correo electrónico"><br>
+                <button type="submit">Enviar por GET</button>
+            </form>
+
+            <h3>Formulario con método POST (simulado)</h3>
+            <form id="formPost" method="post" class="form">
+                <input type="text" name="nombre" required class="form-field animation a3" placeholder="Nombre"><br>
+                <input type="email" name="email" required class="form-field animation a4" placeholder="Correo electrónico"><br>
+                <button type="submit">Enviar por POST</button>
+            </form>
+        </div>
+        <div class="right"></div>
+    </div>
+  <script>
+    // Simular envío por GET (redirigir con parámetros en la URL)
+    document.getElementById('formGet').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const nombre = e.target.nombre.value;
+      const email = e.target.email.value;
+      window.location.href = `mostrar.html?metodo=GET&nombre=${encodeURIComponent(nombre)}&email=${encodeURIComponent(email)}`;
+    });
+
+    // Simular envío por POST usando sessionStorage (o localStorage si quieres que persista)
+    document.getElementById('formPost').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const nombre = e.target.nombre.value;
+      const email = e.target.email.value;
+      // Guardar en sessionStorage para simular un POST
+      sessionStorage.setItem('metodo', 'POST');
+      sessionStorage.setItem('nombre', nombre);
+      sessionStorage.setItem('email', email);
+      window.location.href = 'mostrar.html';
+    });
+  </script>
+</body>
+</html>

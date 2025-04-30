@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="formStyles.css">
+    <meta charset="UTF-8">
+    <title>Mostrar datos</title>
+</head>
+<body style="background-image: url(https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80);">
+  <div  class="container">
+    <div class="center" style="background-color: rgba(71, 71, 71, 0.582);">
+      <div class="header">
+        <h1 class="animation a1" style="color: #761daa">Datos recibidos</h1>
+        <h4 class="animation a2" style="color: cyan;">Información enviada desde el formulario</h4>
+      </div>
+      <div id="resultado" class="form">
+        <!-- Aquí se insertarán los datos -->
+      </div>
+    </div>
+    <!-- <div class="right r1"></div> -->
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const resultado = document.getElementById('resultado');
+
+    if (params.has('metodo') && params.get('metodo') === 'GET') {
+      // Datos desde GET (en la URL)
+      const nombre = params.get('nombre');
+      const email = params.get('email');
+      resultado.innerHTML = `
+        <p class="animation a5"><strong>Método:</strong> GET</p>
+        <p class="animation a5"><strong>Nombre:</strong> ${nombre}</p>
+        <p class="animation a5"><strong>Email:</strong> ${email}</p>
+      `;
+    } else if (sessionStorage.getItem('metodo') === 'POST') {
+      // Datos desde POST (simulado con sessionStorage)
+      const nombre = sessionStorage.getItem('nombre');
+      const email = sessionStorage.getItem('email');
+      resultado.innerHTML = `
+        <p class="animation a5"><strong>Método:</strong> POST</p>
+        <p class="animation a5"><strong>Nombre:</strong> ${nombre}</p>
+        <p class="animation a5"><strong>Email:</strong> ${email}</p>
+      `;
+      sessionStorage.clear();
+    } else {
+      resultado.innerHTML = '<p class="animation a5">No se recibieron datos válidos.</p>';
+    }
+  </script>
+</body>
+</html>
