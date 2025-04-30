@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Géneros de Videojuegos</title>
+    <style>
+        body {
+                background-image: url(https://i.pinimg.com/originals/e9/f1/59/e9f1591cd39f7861c549d26ba89f487b.gif);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                font-family: Arial, sans-serif;
+                color: white;
+                margin: 0;
+                padding: 0;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+        }
+
+        .contenedor {
+            background-color: rgba(145, 6, 6, 0.479);
+            width: 350px;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px;
+            box-sizing: border-box;
+            border-radius: 10px;
+        }
+
+        .texto {
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .botonera {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        button {
+            padding: 10px 12px;
+            font-size: 14px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: rgba(0, 195, 255, 0.397);
+            color: rgb(0, 0, 0);
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: rgb(0, 110, 255);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor">
+        <p class="texto">Selecciona un género de videojuegos:</p>
+
+        <div class="botonera">
+            <button onclick="mostrarDescripcion('acción')">Acción</button>
+            <button onclick="mostrarDescripcion('aventura')">Aventura</button>
+            <button onclick="mostrarDescripcion('estrategia')">Estrategia</button>
+        </div>
+    </div>
+
+    <script>
+        function mostrarDescripcion(genero) {
+            let mensaje = '';
+            switch(genero) {
+                case 'acción':
+                    mensaje = 'Los juegos de acción se centran en desafíos físicos como combates, reflejos y coordinación. Ejemplos: Call of Duty, Devil May Cry.';
+                    break;
+                case 'aventura':
+                    mensaje = 'Los juegos de aventura se enfocan en la exploración, la narrativa y la resolución de acertijos. Ejemplos: The Legend of Zelda, Uncharted.';
+                    break;
+                case 'estrategia':
+                    mensaje = 'Los juegos de estrategia requieren pensamiento táctico y planificación para ganar. Ejemplos: Age of Empires, StarCraft.';
+                    break;
+            }
+            alert(mensaje);
+        }
+    </script>
+
+</body>
+</html>
