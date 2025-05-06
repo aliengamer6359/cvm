@@ -1,10 +1,10 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Xbox Game Pass</title>
-        <link href="gamepas.css" rel="stylesheet" />
+        <title>Game Pass</title>
+        <link href="gamepas.css" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Wallpoet&display=swap" rel="stylesheet" />
@@ -13,95 +13,52 @@
         <div class="ventajas">
             <h1>Xbox Game Pass</h1>
             <p>
-            Game Pass es el servicio de suscripción mensual de Microsoft para videojuegos. Con Game Pass Ultimate, puedes jugar en consola, PC y dispositivos móviles mediante la nube. Esta versión está diseñada para jugadores que buscan una experiencia completa, con acceso a títulos desde el día de su lanzamiento, cientos de juegos de alta calidad, suscripción a EA Play, multijugador en línea para consola, juegos en la nube, descuentos exclusivos y recompensas.
+                Game Pass es el servicio de suscripción mensual de Microsoft para videojuegos. Con Game Pass Ultimate puedes jugar en consola, PC y en la nube desde varios dispositivos. Esta versión está pensada para jugadores que buscan acceso completo a cientos de títulos, incluyendo lanzamientos desde el primer día, EA Play, multijugador en línea, recompensas y más.
             </p>
 
             <h3>Ventajas de Xbox Game Pass</h3>
             <ul>
-                <li>Acceso a cientos de juegos de calidad para consola y PC.</li>
-                <li>Nuevos títulos de Xbox Game Studios desde el primer día.</li>
+                <li>Acceso a cientos de juegos de alta calidad para consola y PC.</li>
+                <li>Nuevos títulos de Xbox Game Studios disponibles desde el primer día.</li>
                 <li>Descuentos y ofertas exclusivas para miembros.</li>
-                <li>Juega en la nube desde distintos dispositivos.</li>
+                <li>Juego en la nube desde distintos dispositivos.</li>
                 <li>Prueba juegos sin compromiso de compra.</li>
             </ul>
 
-            <p>Entre las sagas disponibles destacan:</p>
+            <p>El servicio incluye sagas populares como:</p>
 
-            <h2 class="cod">Call of Duty</h2>
-            <div class="juegos">
-                <iframe width="512" height="315" src="https://www.youtube.com/embed/oyZY_BiTmd8?si=8pX99PtPvYOjhdBZ" 
-                title="Call of Duty" frameborder="0" allowfullscreen></iframe>
-            </div>
+            <div>
+                <h2 class="cod">Call of Duty</h2>
+                <div class="juegos">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/oyZY_BiTmd8?si=8pX99PtPvYOjhdBZ"title="Call of Duty en Game Pass" frameborder="0" allowfullscreen></iframe>
+                </div>
 
-            <h2 class="DOOM">DOOM Eternal</h2>
-            <div class="juegos">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/_J2YcaVqjCQ?si=2NGb1JVsTbYFc5UE"></iframe>
-            </div>
+                <h2 class="cod">DOOM Eternal</h2>
+                <div class="juegos">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/-fsz6b3IBJY?si=Kh2Xi5Z2bDk8t51p" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
 
-            <h2 class="Forza">Forza Horizon 5</h2>
-            <div class="juegos">
-                <iframe width="512" height="315" src="https://www.youtube.com/embed/FYH9n37B7Yw" 
-                title="Forza Horizon 5" frameborder="0" allowfullscreen></iframe>
+                <h2 class="cod">Forza Horizon 5</h2>
+                <div class="juegos">
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/FYH9n37B7Yw"title="Forza Horizon 5 Trailer" frameborder="0" allowfullscreen></iframe>
+                </div>
             </div>
-            <form id="formPost" method="post" class="form">
-                <input type="button" name="si,no" required class="form-field animation a3" placeholder="Nombre"><br>
-                <input type="email" name="email" required class="form-field animation a4" placeholder="Correo electrónico"><br>
-                <button type="submit">Enviar por POST</button>
+            
+            <form class="formulario" onsubmit="mostrarAlerta(); return false;">
+                <label for="opinion">¿Este sitio te ayudó a conocer más sobre Game Pass?</label><br />
+                <input type="text" id="opinion" name="opinion" required placeholder="Escribe tu respuesta aquí..." />
+                <br />
+                <button type="submit">Enviar</button>
             </form>
+            
+            <script>
+                    function mostrarAlerta() {
+                    const respuesta = document.getElementById('opinion').value;
+                    if (respuesta.trim() !== '') {
+                        alert("¡Gracias por tu opinión!\n\n" + respuesta);
+                    }
+                    }
+            </script>         
         </div>
     </body>
-</html> -->
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Game Pass</title>
-  <link href="gamepas.css" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Wallpoet&display=swap" rel="stylesheet" />
-</head>
-<body>
-  <div class="ventajas">
-    <h1>Xbox Game Pass</h1>
-    <p>
-      Game Pass es el servicio de suscripción mensual de Microsoft para videojuegos. Con Game Pass Ultimate puedes jugar en consola, PC y en la nube desde varios dispositivos. Esta versión está pensada para jugadores que buscan acceso completo a cientos de títulos, incluyendo lanzamientos desde el primer día, EA Play, multijugador en línea, recompensas y más.
-    </p>
-
-    <h3>Ventajas de Xbox Game Pass</h3>
-    <ul>
-      <li>Acceso a cientos de juegos de alta calidad para consola y PC.</li>
-      <li>Nuevos títulos de Xbox Game Studios disponibles desde el primer día.</li>
-      <li>Descuentos y ofertas exclusivas para miembros.</li>
-      <li>Juego en la nube desde distintos dispositivos.</li>
-      <li>Prueba juegos sin compromiso de compra.</li>
-    </ul>
-
-    <p>El servicio incluye sagas populares como:</p>
-    
-    <h2 class="cod">Call of Duty</h2>
-    <div class="juegos">
-      <iframe width="100%" height="315" src="https://www.youtube.com/embed/oyZY_BiTmd8?si=8pX99PtPvYOjhdBZ"
-              title="Call of Duty en Game Pass" frameborder="0" allowfullscreen></iframe>
-    </div>
-
-    <h2 class="cod">DOOM Eternal</h2>
-    <div class="juegos">
-        <iframe width="100%" height="315" src="https://www.youtube.com/embed/-fsz6b3IBJY?si=Kh2Xi5Z2bDk8t51p" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-
-    <h2 class="cod">Forza Horizon 5</h2>
-    <div class="juegos">
-      <iframe width="100%" height="315" src="https://www.youtube.com/embed/FYH9n37B7Yw"
-              title="Forza Horizon 5 Trailer" frameborder="0" allowfullscreen></iframe>
-    </div>
-
-    <form method="POST" class="formulario">
-      <label for="opinion">¿Este sitio te ayudó a conocer más sobre Game Pass?</label><br />
-      <input type="text" id="opinion" name="opinion" required placeholder="Escribe tu respuesta aquí..." />
-      <br /><button type="submit">Enviar</button>
-    </form>
-  </div>
-</body>
 </html>

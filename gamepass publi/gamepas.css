@@ -78,6 +78,10 @@ li {
   border: none;
   border-radius: 8px;
   cursor: pointer;
+  
+}
+.formulario button:hover{
+  background-color: #6dff6d;
 }
 
 @media (max-width: 768px) {
